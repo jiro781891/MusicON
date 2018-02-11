@@ -1,0 +1,45 @@
+{%load static%}
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset = "utf-8" >
+  <title>MusicOn</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400" rel="stylesheet">
+  <meta name = "keywords" content = "тестовый , сайт, проверка" >
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href = "{% static 'static/style.css' %}" >
+  <link rel="shortcut icon" type="image/ico" href = "{% static 'static/title.ico' %}" />
+
+
+</head>
+
+<body>
+  <div class = "general-container">
+    <div class = "container top-container">
+      <div class = "row">
+        <div class = "col-lg-8 col-lg-offset-2">
+          <h1 class = "title"><b>OUR WEBSITE IS COMING SOON!<br />
+          GET NOTIFIED ABOUT OUR LAUNCH</b></h1>
+          <div>
+            <form action="" method="post" class = "form-inline text-center">{% csrf_token %}
+              <div class="form-group">
+                <label><b>YOUR EMAIL: </b></label>
+
+                <input type = "text" name = " {{form.email.name}} " class = "form-control">
+              </div>
+              
+
+                <button type="submit" class = "btn btn-warning btn-orange" ><b>NOTIFY ME</b></button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
